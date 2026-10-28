@@ -1,62 +1,76 @@
 /* =========================================
-   BETTIE-CLAUDIE O. AMADI
-   SOCIAL MEDIA PORTFOLIO INTERACTIONS
+   BETTIE AMADI — PORTFOLIO INTERACTIONS
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // 1. Mobile Navigation
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
+    /* -------------------------------------
+       1. MOBILE NAVIGATION
+    ------------------------------------- */
 
-    if (menuToggle && navLinks) {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mainNavigation = document.getElementById("main-navigation");
+    const navigationLinks = document.querySelectorAll(".nav-link");
+
+    function closeMenu() {
+        if (!menuToggle || !mainNavigation) return;
+
+        menuToggle.classList.remove("is-open");
+        mainNavigation.classList.remove("is-open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
+    if (menuToggle && mainNavigation) {
 
         menuToggle.addEventListener("click", function () {
-            const isExpanded =
-                menuToggle.getAttribute("aria-expanded") === "true";
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                String(!isExpanded)
-            );
+            const isOpen = mainNavigation.classList.toggle("is-open");
+
+            menuToggle.classList.toggle("is-open", isOpen);
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
 
             menuToggle.setAttribute(
                 "aria-label",
-                isExpanded ? "Open navigation menu" : "Close navigation menu"
+                isOpen ? "Close navigation menu" : "Open navigation menu"
             );
 
-            navLinks.classList.toggle("open");
         });
 
-        // Close the mobile menu after a navigation link is selected.
-        navLinks.querySelectorAll("a").forEach(function (link) {
-            link.addEventListener("click", function () {
-                navLinks.classList.remove("open");
-                menuToggle.setAttribute("aria-expanded", "false");
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-            });
+        navigationLinks.forEach(function (link) {
+            link.addEventListener("click", closeMenu);
         });
 
-        // Close the mobile menu when switching to desktop width.
-        window.addEventListener("resize", function () {
-            if (window.innerWidth > 760) {
-                navLinks.classList.remove("open");
-                menuToggle.setAttribute("aria-expanded", "false");
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
+        mainNavigation.querySelectorAll(".nav-contact").forEach(function (link) {
+            link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeMenu();
             }
         });
+
+        document.addEventListener("click", function (event) {
+            const clickedInsideMenu = mainNavigation.contains(event.target);
+            const clickedToggle = menuToggle.contains(event.target);
+
+            if (!clickedInsideMenu && !clickedToggle) {
+                closeMenu();
+            }
+        });
+
     }
 
 
-    // 2. Portfolio Filtering
+    /* -------------------------------------
+       2. PORTFOLIO FILTERS
+    ------------------------------------- */
+
     const filterButtons = document.querySelectorAll(".filter-button");
-    const portfolioCards = document.querySelectorAll(".portfolio-card");
+    const projectCards = document.querySelectorAll(".project-card");
 
     filterButtons.forEach(function (button) {
 
@@ -64,25 +78,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const selectedFilter = button.dataset.filter;
 
-            // Highlight the selected filter.
+            // Update the selected filter button.
             filterButtons.forEach(function (filterButton) {
-                filterButton.classList.remove("active");
+                const isActive = filterButton === button;
+
+                filterButton.classList.toggle("active", isActive);
+
+                filterButton.setAttribute(
+                    "aria-pressed",
+                    String(isActive)
+                );
             });
 
-            button.classList.add("active");
+            // Show or hide projects according to their category.
+            projectCards.forEach(function (card) {
 
-            // Display projects matching the selected category.
-            portfolioCards.forEach(function (card) {
+                const projectCategory = card.dataset.category;
 
-                const category = card.dataset.category;
-
-                if (
+                const shouldShow =
                     selectedFilter === "all" ||
-                    category === selectedFilter
-                ) {
-                    card.classList.remove("is-hidden");
+                    selectedFilter === projectCategory;
+
+                card.classList.toggle("is-hidden", !shouldShow);
+
+                if (shouldShow) {
+                    card.removeAttribute("aria-hidden");
                 } else {
-                    card.classList.add("is-hidden");
+                    card.setAttribute("aria-hidden", "true");
                 }
 
             });
@@ -92,45 +114,165 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // 3. Automatically Update the Copyright Year
-    const yearElement = document.getElementById("current-year");
+    /* -------------------------------------
+       3. ACTIVE NAVIGATION LINKS
+    ------------------------------------- */
 
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
+    const sections = document.querySelectorAll(
+        "main section[id]"
+    );
+
+    if ("IntersectionObserver" in window && sections.length > 0) {
+
+        const sectionObserver = new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (!entry.isIntersecting) return;
+
+                    const currentSectionId = entry.target.id;
+
+                    navigationLinks.forEach(function (link) {
+
+                        const linkTarget = link.getAttribute("href");
+
+                        const isCurrent =
+                            linkTarget === "#" + currentSectionId;
+
+                        link.classList.toggle("active", isCurrent);
+
+                    });
+
+                });
+
+            },
+            {
+                root: null,
+                rootMargin: "-25% 0px -60% 0px",
+                threshold: 0
+            }
+        );
+
+        sections.forEach(function (section) {
+            sectionObserver.observe(section);
+        });
+
     }
 
 
-    // 4. Smooth Navigation for Older Browsers
-    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    /* -------------------------------------
+       4. AUTOMATIC FOOTER YEAR
+    ------------------------------------- */
+
+    const currentYearElement = document.getElementById("current-year");
+
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+
+
+    /* -------------------------------------
+       5. IMAGE ERROR HANDLING
+    ------------------------------------- */
+
+    const portfolioImages = document.querySelectorAll(
+        ".project-image, .hero-image, .about-image"
+    );
+
+    portfolioImages.forEach(function (img) {
+
+        img.addEventListener("error", function () {
+
+            console.warn(
+                "Image could not be loaded. Check its filename and path:",
+                img.getAttribute("src")
+            );
+
+            img.classList.add("image-load-error");
+
+        });
+
+        img.addEventListener("load", function () {
+            img.classList.remove("image-load-error");
+        });
+
+    });
+
+
+    /* -------------------------------------
+       6. SMOOTH INTERNAL NAVIGATION
+    ------------------------------------- */
+
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
+
+    internalLinks.forEach(function (link) {
 
         link.addEventListener("click", function (event) {
 
             const targetId = link.getAttribute("href");
 
-            if (!targetId || targetId === "#") {
-                return;
-            }
+            if (!targetId || targetId === "#") return;
 
             const targetElement = document.querySelector(targetId);
 
-            if (targetElement) {
-                event.preventDefault();
+            if (!targetElement) return;
 
-                targetElement.scrollIntoView({
-                    behavior: window.matchMedia(
-                        "(prefers-reduced-motion: reduce)"
-                    ).matches ? "auto" : "smooth",
-                    block: "start"
-                });
+            event.preventDefault();
 
-                // Keep the browser address bar in sync with the section.
-                if (window.location.hash !== targetId) {
-                    history.pushState(null, "", targetId);
-                }
+            targetElement.scrollIntoView({
+                behavior: window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                ).matches ? "auto" : "smooth",
+                block: "start"
+            });
+
+            // Keep the URL in sync with the selected section.
+            if (history.replaceState) {
+                history.replaceState(null, "", targetId);
             }
 
         });
 
     });
+
+
+    /* -------------------------------------
+       7. EXTERNAL LINKS
+    ------------------------------------- */
+
+    const externalLinks = document.querySelectorAll(
+        'a[target="_blank"]'
+    );
+
+    externalLinks.forEach(function (link) {
+        link.setAttribute("rel", "noopener noreferrer");
+    });
+
+
+    /* -------------------------------------
+       8. PROJECT CARD KEYBOARD SUPPORT
+    ------------------------------------- */
+
+    projectCards.forEach(function (card) {
+
+        const projectLink = card.querySelector(".project-image-link");
+
+        if (!projectLink) return;
+
+        projectLink.setAttribute(
+            "aria-label",
+            projectLink.getAttribute("aria-label") ||
+            "Open project image"
+        );
+
+    });
+
+
+    /* -------------------------------------
+       9. READY
+    ------------------------------------- */
+
+    console.info("Bettie Amadi's portfolio interactions are ready.");
 
 });
