@@ -4,85 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Bettie-Claudie O. Amadi is a social media manager specializing in social media strategy, content creation, audience engagement, and digital brand growth.">
+    <meta name="description" content="Explore Bettie Claudie O. Amadi's social media management portfolio, featuring social media strategy, content creation, graphic design, audience engagement, and analytics.">
 
-    <meta name="author" content="Bettie-Claudie O. Amadi">
-    <meta name="theme-color" content="#7041a6">
+    <meta name="theme-color" content="#7041A6">
 
-    <title>Bettie-Claudie O. Amadi | Social Media Manager</title>
+    <title>Bettie Amadi | Social Media Manager & Strategist</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
     <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <header class="site-header">
-        <nav class="navbar container" aria-label="Main navigation">
+    <!-- =========================
+         HEADER & NAVIGATION
+    ========================== -->
 
-            <a href="#home" class="logo">
-                Bettie<span>.</span>
+    <header class="site-header" id="top">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo" aria-label="Bettie Amadi home">
+                <span class="logo-mark">B.</span>
+                <span class="logo-text">
+                    <strong>Bettie Amadi</strong>
+                    <small>Social Media Manager</small>
+                </span>
             </a>
 
             <button
                 class="menu-toggle"
                 id="menu-toggle"
+                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
-                aria-controls="nav-links">
+                aria-controls="main-navigation"
+            >
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <div class="nav-links" id="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact" class="nav-cta">Let's Talk <span>↗</span></a>
-            </div>
+            <nav class="main-navigation" id="main-navigation" aria-label="Main navigation">
 
-        </nav>
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#skills" class="nav-link">Skills</a>
+
+                <a href="#contact" class="nav-contact">
+                    Let's Talk <span aria-hidden="true">↗</span>
+                </a>
+
+            </nav>
+        </div>
     </header>
 
 
     <main>
 
-        <!-- Hero Section -->
-        <section class="hero section" id="home">
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+
+        <section class="hero-section section" id="home">
             <div class="container hero-grid">
 
                 <div class="hero-content">
 
-                    <div class="availability">
-                        <span class="availability-dot"></span>
-                        Social Media Manager & Digital Creative
-                    </div>
-
-                    <p class="eyebrow">STRATEGY · CONTENT · CONNECTION</p>
+                    <span class="eyebrow">
+                        SOCIAL MEDIA MANAGEMENT & DIGITAL STRATEGY
+                    </span>
 
                     <h1>
-                        Turning your social media into
-                        <span class="gradient-text">a powerful brand experience.</span>
+                        Helping Brands
+                        <span class="text-highlight">Stand Out,</span>
+                        Connect & Grow.
                     </h1>
 
                     <p class="hero-description">
-                        Hi, I'm Bettie-Claudie O. Amadi. I help brands build
-                        a meaningful online presence through thoughtful content,
-                        strategic social media management, and authentic audience
-                        engagement.
+                        I help businesses build a stronger online presence
+                        through thoughtful social media strategy, engaging
+                        content, creative visuals, and data-informed decisions.
                     </p>
 
-                    <div class="hero-buttons">
+                    <div class="hero-actions">
                         <a href="#portfolio" class="button button-primary">
-                            Explore My Work <span>↗</span>
+                            Explore My Work <span aria-hidden="true">↗</span>
                         </a>
 
                         <a href="#contact" class="button button-secondary">
@@ -91,286 +100,930 @@
                     </div>
 
                     <div class="hero-trust">
-                        <div class="trust-icon">✦</div>
-                        <p>
-                            <strong>Creative thinking. Strategic execution.</strong>
-                            <span>Helping brands communicate with purpose.</span>
-                        </p>
+                        <span class="trust-indicator"></span>
+                        <p>Creative thinking. Strategic execution. Meaningful connections.</p>
+                    </div>
+
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <strong>3+</strong>
+                            <span>Years of Experience</span>
+                        </div>
+
+                        <div class="highlight-item">
+                            <strong>10</strong>
+                            <span>Featured Projects</span>
+                        </div>
+
+                        <div class="highlight-item">
+                            <strong>3</strong>
+                            <span>Core Project Categories</span>
+                        </div>
                     </div>
 
                 </div>
-
 
                 <div class="hero-visual">
 
                     <div class="hero-decoration decoration-one"></div>
                     <div class="hero-decoration decoration-two"></div>
 
-                    <div class="profile-card">
-
-                        <div class="profile-image">
-                            <img
-                                src="images/profile.png"
-                                alt="Portrait of Bettie-Claudie O. Amadi"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                            <div class="profile-placeholder">
-                                <span>BC</span>
-                                <p>Your photo goes here</p>
-                            </div>
-                        </div>
-
-                        <div class="profile-card-content">
-                            <p class="profile-label">YOUR BRAND'S DIGITAL PARTNER</p>
-
-                            <h2>Bettie-Claudie<br>O. Amadi</h2>
-
-                            <p>
-                                Making brands more visible, engaging, and memorable.
-                            </p>
-
-                            <div class="profile-tags">
-                                <span>Strategy</span>
-                                <span>Creativity</span>
-                                <span>Growth</span>
-                            </div>
-                        </div>
-
+                    <div class="hero-image-frame">
+                        <img
+                            src="images/profile.png"
+                            alt="Bettie Amadi, social media manager"
+                            class="hero-image"
+                        >
                     </div>
 
                     <div class="floating-card floating-card-top">
-                        <span class="floating-icon">✳</span>
+                        <span class="floating-icon">✦</span>
                         <div>
-                            <strong>Creative Content</strong>
-                            <span>Made with purpose</span>
+                            <strong>Creative Strategy</strong>
+                            <span>Purposeful content</span>
                         </div>
                     </div>
 
                     <div class="floating-card floating-card-bottom">
                         <span class="floating-icon">↗</span>
                         <div>
-                            <strong>Social First</strong>
-                            <span>Strategy-led execution</span>
+                            <strong>Social Media</strong>
+                            <span>Content & engagement</span>
                         </div>
                     </div>
 
+                    <div class="hero-caption">
+                        <span class="caption-line"></span>
+                        <span>Creativity with a purpose.</span>
+                    </div>
+
                 </div>
-
-            </div>
-
-            <div class="hero-bottom container">
-                <span>CREATIVE STRATEGY</span>
-                <span>CONTENT CREATION</span>
-                <span>COMMUNITY ENGAGEMENT</span>
-                <span>DIGITAL PRESENCE</span>
             </div>
         </section>
 
 
-        <!-- About Section -->
-        <section class="section about-section" id="about">
-            <div class="container">
+        <!-- =========================
+             BRAND STATEMENT
+        ========================== -->
 
-                <div class="section-heading">
-                    <p class="eyebrow">GET TO KNOW ME</p>
+        <section class="brand-strip" aria-label="Our approach">
+            <div class="container brand-strip-content">
+                <span>STRATEGY</span>
+                <span class="brand-strip-dot">✦</span>
+                <span>CREATIVITY</span>
+                <span class="brand-strip-dot">✦</span>
+                <span>CONSISTENCY</span>
+                <span class="brand-strip-dot">✦</span>
+                <span>GROWTH</span>
+            </div>
+        </section>
+
+
+        <!-- =========================
+             ABOUT ME
+        ========================== -->
+
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
+
+                <div class="about-visual">
+
+                    <div class="about-image-background"></div>
+
+                    <div class="about-image-frame">
+                        <img
+                            src="images/about-me.jpg"
+                            alt="Bettie Amadi, creative social media professional"
+                            class="about-image"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="about-note">
+                        <span class="about-note-icon">✦</span>
+                        <p>
+                            <strong>Thoughtful by design.</strong>
+                            <span>Strategic by purpose.</span>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="about-content">
+
+                    <span class="eyebrow">A LITTLE ABOUT ME</span>
 
                     <h2>
-                        Creativity meets
-                        <span class="gradient-text">strategy.</span>
+                        Behind Every Strong Brand Is a
+                        <span class="text-highlight">Thoughtful Strategy.</span>
                     </h2>
 
                     <p>
-                        Behind every memorable brand is a story worth sharing.
-                        My work focuses on helping brands tell that story online.
+                        Hello, I'm Bettie Claudie O. Amadi, a social media
+                        manager passionate about helping businesses communicate
+                        their value, connect with their audiences, and build
+                        a consistent digital presence.
                     </p>
-                </div>
 
-                <div class="about-grid">
+                    <p>
+                        With over three years of experience in social media
+                        management, I bring together content planning,
+                        creative design, audience engagement, and performance
+                        analysis to support a brand's online goals.
+                    </p>
 
-                    <div class="about-visual">
-                        <div class="about-image-frame">
-                            <img
-                                src="images/about-me.jpg"
-                                alt="Bettie-Claudie working on a social media project"
-                                loading="lazy"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <p>
+                        My approach combines creativity with purpose.
+                        Every post, visual, and content plan should contribute
+                        to a bigger picture: communicating clearly, building
+                        relationships, and helping businesses grow.
+                    </p>
 
-                            <div class="image-placeholder">
-                                <span>✦</span>
-                                <p>Add a professional photo here</p>
-                            </div>
+                    <div class="about-values">
+
+                        <div class="about-value">
+                            <span class="value-check">✓</span>
+                            <span>Strategic content planning</span>
                         </div>
 
-                        <div class="about-note">
-                            <span>✳</span>
-                            <p>Thoughtful content. Intentional growth.</p>
+                        <div class="about-value">
+                            <span class="value-check">✓</span>
+                            <span>Creative visual storytelling</span>
                         </div>
-                    </div>
 
-                    <div class="about-content">
+                        <div class="about-value">
+                            <span class="value-check">✓</span>
+                            <span>Audience engagement</span>
+                        </div>
 
-                        <h3>Hi, I'm Bettie-Claudie.</h3>
-
-                        <p>
-                            I'm a social media manager passionate about helping
-                            businesses communicate their value, connect with
-                            their audiences, and build a consistent digital presence.
-                        </p>
-
-                        <p>
-                            With over three years of social media management
-                            experience, I understand the importance of combining
-                            creativity with planning, consistency, and audience-focused
-                            communication.
-                        </p>
-
-                        <p>
-                            From developing content ideas and planning publishing
-                            schedules to creating engaging posts and managing online
-                            communities, I approach social media with both the
-                            bigger picture and the details in mind.
-                        </p>
-
-                        <p>
-                            My goal is simple: to help brands show up online with
-                            clarity, personality, and purpose.
-                        </p>
-
-                        <a href="#contact" class="text-link">
-                            Let's discuss your brand <span>↗</span>
-                        </a>
+                        <div class="about-value">
+                            <span class="value-check">✓</span>
+                            <span>Performance-focused thinking</span>
+                        </div>
 
                     </div>
 
-                </div>
+                    <a href="#services" class="text-link">
+                        Discover My Services <span aria-hidden="true">→</span>
+                    </a>
 
+                </div>
             </div>
         </section>
 
 
-        <!-- Services Section -->
+        <!-- =========================
+             SERVICES
+        ========================== -->
+
         <section class="section services-section" id="services">
             <div class="container">
 
                 <div class="section-heading">
-                    <p class="eyebrow">WHAT I DO</p>
+                    <span class="eyebrow">WHAT I DO</span>
 
                     <h2>
-                        Services designed for
-                        <span class="gradient-text">your brand.</span>
+                        Services Designed to
+                        <span class="text-highlight">Move Your Brand Forward.</span>
                     </h2>
 
                     <p>
-                        Strategic support to help your business maintain a
-                        consistent, engaging, and professional online presence.
+                        Practical, creative, and strategic social media
+                        support tailored to your business goals.
                     </p>
                 </div>
 
                 <div class="services-grid">
 
                     <article class="service-card">
-                        <div class="service-icon">◈</div>
+                        <div class="service-icon" aria-hidden="true">◎</div>
+
                         <span class="service-number">01</span>
 
                         <h3>Social Media Management</h3>
 
                         <p>
-                            Day-to-day account management, content scheduling,
-                            profile maintenance, and consistent brand communication.
+                            Consistent platform management, content scheduling,
+                            page organisation, and day-to-day account support
+                            to help maintain a professional online presence.
                         </p>
 
-                        <a href="#contact" aria-label="Ask about social media management">
-                            Discuss this service ↗
+                        <a href="#contact" class="service-link" aria-label="Ask about social media management">
+                            Learn More <span aria-hidden="true">↗</span>
                         </a>
                     </article>
 
 
                     <article class="service-card">
-                        <div class="service-icon">✳</div>
+                        <div class="service-icon" aria-hidden="true">✳</div>
+
                         <span class="service-number">02</span>
 
-                        <h3>Content Strategy</h3>
+                        <h3>Content Strategy & Planning</h3>
 
                         <p>
-                            Content planning, audience-focused themes, campaign
-                            ideas, and publishing calendars aligned with business goals.
+                            Content calendars, content pillars, campaign
+                            planning, and organised publishing schedules
+                            aligned with your brand's communication goals.
                         </p>
 
-                        <a href="#contact" aria-label="Ask about content strategy">
-                            Discuss this service ↗
+                        <a href="#contact" class="service-link" aria-label="Ask about content strategy">
+                            Learn More <span aria-hidden="true">↗</span>
                         </a>
                     </article>
 
 
                     <article class="service-card">
-                        <div class="service-icon">▧</div>
+                        <div class="service-icon" aria-hidden="true">◇</div>
+
                         <span class="service-number">03</span>
 
-                        <h3>Content Creation</h3>
+                        <h3>Social Media Graphics</h3>
 
                         <p>
-                            Social media graphics, captions, carousel concepts,
-                            short-form content, and creative assets that communicate
-                            your brand's message.
+                            Brand-conscious social graphics and visual content
+                            designed to communicate messages clearly and
+                            maintain a consistent visual identity.
                         </p>
 
-                        <a href="#contact" aria-label="Ask about content creation">
-                            Discuss this service ↗
+                        <a href="#contact" class="service-link" aria-label="Ask about social media graphics">
+                            Learn More <span aria-hidden="true">↗</span>
                         </a>
                     </article>
 
 
                     <article class="service-card">
-                        <div class="service-icon">◎</div>
+                        <div class="service-icon" aria-hidden="true">↗</div>
+
                         <span class="service-number">04</span>
 
-                        <h3>Community Management</h3>
+                        <h3>Analytics & Reporting</h3>
 
                         <p>
-                            Audience interaction, comment and message management,
-                            relationship building, and thoughtful brand communication.
+                            Reviewing available social media performance data
+                            to identify useful insights, understand content
+                            performance, and inform future decisions.
                         </p>
 
-                        <a href="#contact" aria-label="Ask about community management">
-                            Discuss this service ↗
+                        <a href="#contact" class="service-link" aria-label="Ask about social media analytics">
+                            Learn More <span aria-hidden="true">↗</span>
                         </a>
                     </article>
 
 
                     <article class="service-card">
-                        <div class="service-icon">▶</div>
+                        <div class="service-icon" aria-hidden="true">♡</div>
+
                         <span class="service-number">05</span>
 
-                        <h3>Multi-Platform Management</h3>
+                        <h3>Community Engagement</h3>
 
                         <p>
-                            Coordinated social media support across Instagram,
-                            Facebook, LinkedIn, TikTok, YouTube, and other relevant
-                            platforms.
+                            Supporting meaningful audience interactions
+                            through comments, messages, relationship-building,
+                            and consistent brand communication.
                         </p>
 
-                        <a href="#contact" aria-label="Ask about multi-platform management">
-                            Discuss this service ↗
+                        <a href="#contact" class="service-link" aria-label="Ask about community engagement">
+                            Learn More <span aria-hidden="true">↗</span>
                         </a>
                     </article>
 
 
                     <article class="service-card">
-                        <div class="service-icon">⌁</div>
+                        <div class="service-icon" aria-hidden="true">✧</div>
+
                         <span class="service-number">06</span>
 
-                        <h3>Performance Reporting</h3>
+                        <h3>Content Creation Support</h3>
 
                         <p>
-                            Organizing social media insights, reviewing content
-                            performance, and identifying opportunities for
-                            data-informed improvements.
+                            Developing content ideas, captions, post concepts,
+                            and creative direction that help brands communicate
+                            their messages with clarity and consistency.
                         </p>
 
-                        <a href="#contact" aria-label="Ask about performance reporting">
-                            Discuss this service ↗
+                        <a href="#contact" class="service-link" aria-label="Ask about content creation">
+                            Learn More <span aria-hidden="true">↗</span>
                         </a>
                     </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================
+             PORTFOLIO
+        ========================== -->
+
+        <section class="section portfolio-section" id="portfolio">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">SELECTED WORK</span>
+
+                    <h2>
+                        A Closer Look at
+                        <span class="text-highlight">What I Create.</span>
+                    </h2>
+
+                    <p>
+                        Explore selected examples of my social media analytics,
+                        creative graphics, and content planning work.
+                    </p>
+                </div>
+
+
+                <!-- Portfolio filters -->
+
+                <div class="portfolio-filters" role="group" aria-label="Filter portfolio projects">
+
+                    <button
+                        class="filter-button active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true"
+                    >
+                        All Work
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-filter="analytics"
+                        aria-pressed="false"
+                    >
+                        Analytics
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-filter="design"
+                        aria-pressed="false"
+                    >
+                        Social Graphics
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-filter="content"
+                        aria-pressed="false"
+                    >
+                        Content Planning
+                    </button>
+
+                </div>
+
+
+                <!-- Project gallery -->
+
+                <div class="portfolio-grid" id="portfolio-grid">
+
+
+                    <!-- PROJECT 1: ANALYTICS -->
+
+                    <article class="project-card" data-category="analytics">
+                        <a
+                            href="images/project-1.jpg"
+                            class="project-image-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View analytics project 1 full size"
+                        >
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="images/project-1.jpg"
+                                    alt="Social media analytics project 1"
+                                    class="project-image"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-view" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+
+                        <div class="project-info">
+                            <span class="project-category">ANALYTICS & INSIGHTS</span>
+                            <h3>Social Media Performance</h3>
+                            <p>
+                                A review of social media performance data
+                                to understand content engagement and visibility.
+                            </p>
+                            <span class="project-tag">Project 01</span>
+                        </div>
+                    </article>
+
+
+                    <!-- PROJECT 2: ANALYTICS -->
+
+                    <article class="project-card" data-category="analytics">
+                        <a
+                            href="images/project-2.jpg"
+                            class="project-image-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View analytics project 2 full size"
+                        >
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="images/project-2.jpg"
+                                    alt="Social media analytics project 2"
+                                    class="project-image"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-view" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+
+                        <div class="project-info">
+                            <span class="project-category">ANALYTICS & INSIGHTS</span>
+                            <h3>Audience & Content Insights</h3>
+                            <p>
+                                Social media metrics presented to support
+                                performance review and content decisions.
+                            </p>
+                            <span class="project-tag">Project 02</span>
+                        </div>
+                    </article>
+
+
+                    <!-- PROJECT 3: ANALYTICS -->
+
+                    <article class="project-card" data-category="analytics">
+                        <a
+                            href="images/project-3.jpg"
+                            class="project-image-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View analytics project 3 full size"
+                        >
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="images/project-3.jpg"
+                                    alt="Social media analytics project 3"
+                                    class="project-image"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-view" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+
+                        <div class="project-info">
+                            <span class="project-category">ANALYTICS & INSIGHTS</span>
+                            <h3>Platform Performance Review</h3>
+                            <p>
+                                An example of using platform analytics
+                                to examine social media activity and results.
+                            </p>
+                            <span class="project-tag">Project 03</span>
+                        </div>
+                    </article>
+
+
+                    <!-- PROJECT 4: ANALYTICS -->
+
+                    <article class="project-card" data-category="analytics">
+                        <a
+                            href="images/project-4.jpg"
+                            class="project-image-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View analytics project 4 full size"
+                        >
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="images/project-4.jpg"
+                                    alt="Social media analytics project 4"
+                                    class="project-image"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-view" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+
+                        <div class="project-info">
+                            <span class="project-category">ANALYTICS & INSIGHTS</span>
+                            <h3>Social Media Data Analysis</h3>
+                            <p>
+                                A selected analytics example demonstrating
+                                performance tracking and reporting.
+                            </p>
+                            <span class="project-tag">Project 04</span>
+                        </div>
+                    </article>
+
+
+                    <!-- PROJECT 5: GRAPHIC DESIGN -->
+
+                    <article class="project-card" data-category="design">
+                        <a
+                            href="images/project-5.jpg"
+                            class="project-image-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View graphic design project 5 full size"
+                        >
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="images/project-5.jpg"
+                                    alt="Social media graphic design project 5"
+                                    class="project-image"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-view" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+
+                        <div class="project-info">
+                            <span class="project-category">SOCIAL GRAPHICS</span>
+                            <h3>Branded Social Media Design</h3>
+                            <p>
+                                A visual content example created to communicate
+                                a brand message through design.
+                            </p>
+                            <span class="project-tag">Project 05</span>
+                        </div>
+                    </article>
+
+
+                    <!-- PROJECT 6: GRAPHIC DESIGN -->
+
+                    <article class="project-card" data-category="design">
+                        <a
+                            href="images/project-6.jpg"
+                            class="project-image-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View graphic design project 6 full size"
+                        >
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="images/project-6.jpg"
+                                    alt="Social media graphic design project 6"
+                                    class="project-image"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-view" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+
+                        <div class="project-info">
+                            <span class="project-category">SOCIAL GRAPHICS</span>
+                            <h3>Creative Campaign Visual</h3>
+                            <p>
+                                A social media creative designed to support
+                                clear and consistent brand communication.
+                            </p>
+                            <span class="project-tag">Project 06</span>
+                        </div>
+                    </article>
+
+
+                    <!-- PROJECT 7: GRAPHIC DESIGN -->
+
+                    <article class="project-card" data-category="design">
+                        <a
+                            href="images/project-7.jpg"
+                            class="project-image-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View graphic design project 7 full size"
+                        >
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="images/project-7.jpg"
+                                    alt="Social media graphic design project 7"
+                                    class="project-image"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-view" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+
+                        <div class="project-info">
+                            <span class="project-category">SOCIAL GRAPHICS</span>
+                            <h3>Social Content Creative</h3>
+                            <p>
+                                A designed social media asset focused on
+                                visual communication and brand presentation.
+                            </p>
+                            <span class="project-tag">Project 07</span>
+                        </div>
+                    </article>
+
+
+                    <!-- PROJECT 8: GRAPHIC DESIGN -->
+
+                    <article class="project-card" data-category="design">
+                        <a
+                            href="images/project-8.jpg"
+                            class="project-image-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View graphic design project 8 full size"
+                        >
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="images/project-8.jpg"
+                                    alt="Social media graphic design project 8"
+                                    class="project-image"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-view" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+
+                        <div class="project-info">
+                            <span class="project-category">SOCIAL GRAPHICS</span>
+                            <h3>Branded Content Design</h3>
+                            <p>
+                                A visual example of creative content developed
+                                for a social media audience.
+                            </p>
+                            <span class="project-tag">Project 08</span>
+                        </div>
+                    </article>
+
+
+                    <!-- PROJECT 9: GRAPHIC DESIGN -->
+
+                    <article class="project-card" data-category="design">
+                        <a
+                            href="images/project-9.jpg"
+                            class="project-image-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View graphic design project 9 full size"
+                        >
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="images/project-9.jpg"
+                                    alt="Social media graphic design project 9"
+                                    class="project-image"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-view" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+
+                        <div class="project-info">
+                            <span class="project-category">SOCIAL GRAPHICS</span>
+                            <h3>Social Media Campaign Creative</h3>
+                            <p>
+                                A graphic design example created to support
+                                a campaign or brand communication objective.
+                            </p>
+                            <span class="project-tag">Project 09</span>
+                        </div>
+                    </article>
+
+
+                    <!-- PROJECT 10: CONTENT CALENDAR -->
+
+                    <article class="project-card" data-category="content">
+                        <a
+                            href="images/project-10.jpg"
+                            class="project-image-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View content calendar project 10 full size"
+                        >
+                            <div class="project-image-wrapper">
+                                <img
+                                    src="images/project-10.jpg"
+                                    alt="Social media content calendar project 10"
+                                    class="project-image"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-view" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+
+                        <div class="project-info">
+                            <span class="project-category">CONTENT PLANNING</span>
+                            <h3>Social Media Content Calendar</h3>
+                            <p>
+                                A content planning example showing how social
+                                media posts can be organised into a publishing schedule.
+                            </p>
+                            <span class="project-tag">Project 10</span>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                <div class="portfolio-note">
+                    <span aria-hidden="true">✦</span>
+                    <p>
+                        Each project represents a part of my approach to
+                        thoughtful, creative, and organised social media work.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             MY APPROACH
+        ========================== -->
+
+        <section class="section approach-section" id="approach">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">HOW I WORK</span>
+
+                    <h2>
+                        A Thoughtful Process.
+                        <span class="text-highlight">Purposeful Results.</span>
+                    </h2>
+
+                    <p>
+                        Good social media work starts with understanding
+                        the brand and building a clear plan.
+                    </p>
+                </div>
+
+                <div class="approach-grid">
+
+                    <article class="approach-card">
+                        <span class="approach-number">01</span>
+                        <h3>Understand</h3>
+                        <p>
+                            Learn about the business, its audience,
+                            brand voice, and communication goals.
+                        </p>
+                    </article>
+
+                    <article class="approach-card">
+                        <span class="approach-number">02</span>
+                        <h3>Plan</h3>
+                        <p>
+                            Organise content ideas, themes, schedules,
+                            and creative direction.
+                        </p>
+                    </article>
+
+                    <article class="approach-card">
+                        <span class="approach-number">03</span>
+                        <h3>Create</h3>
+                        <p>
+                            Develop relevant content and visuals that
+                            communicate the brand's message clearly.
+                        </p>
+                    </article>
+
+                    <article class="approach-card">
+                        <span class="approach-number">04</span>
+                        <h3>Review</h3>
+                        <p>
+                            Monitor available performance data and use
+                            useful insights to inform future content.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================
+             SKILLS & PLATFORMS
+        ========================== -->
+
+        <section class="section skills-section" id="skills">
+            <div class="container skills-grid">
+
+                <div class="skills-content">
+
+                    <span class="eyebrow">MY EXPERTISE</span>
+
+                    <h2>
+                        The Skills Behind
+                        <span class="text-highlight">The Strategy.</span>
+                    </h2>
+
+                    <p>
+                        I bring together creative thinking, organisation,
+                        communication, and performance awareness to support
+                        effective social media management.
+                    </p>
+
+                    <div class="skills-list">
+
+                        <div class="skill-item">
+                            <div class="skill-heading">
+                                <span>Social Media Strategy</span>
+                            </div>
+                            <div class="skill-line">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-heading">
+                                <span>Content Planning & Scheduling</span>
+                            </div>
+                            <div class="skill-line">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-heading">
+                                <span>Social Media Graphics</span>
+                            </div>
+                            <div class="skill-line">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-heading">
+                                <span>Audience Engagement</span>
+                            </div>
+                            <div class="skill-line">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-heading">
+                                <span>Analytics & Reporting</span>
+                            </div>
+                            <div class="skill-line">
+                                <span></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="platforms-panel">
+
+                    <div class="platforms-panel-heading">
+                        <span class="eyebrow">DIGITAL TOOLKIT</span>
+                        <h3>Platforms & Tools</h3>
+                        <p>
+                            Tools and platforms relevant to social media
+                            management, content creation, and organisation.
+                        </p>
+                    </div>
+
+                    <div class="platform-list">
+
+                        <div class="platform-item">
+                            <span class="platform-symbol">f</span>
+                            <span>Facebook</span>
+                        </div>
+
+                        <div class="platform-item">
+                            <span class="platform-symbol">in</span>
+                            <span>LinkedIn</span>
+                        </div>
+
+                        <div class="platform-item">
+                            <span class="platform-symbol">◎</span>
+                            <span>Instagram</span>
+                        </div>
+
+                        <div class="platform-item">
+                            <span class="platform-symbol">✳</span>
+                            <span>Canva</span>
+                        </div>
+
+                        <div class="platform-item">
+                            <span class="platform-symbol">▦</span>
+                            <span>Google Sheets</span>
+                        </div>
+
+                        <div class="platform-item">
+                            <span class="platform-symbol">✧</span>
+                            <span>ChatGPT</span>
+                        </div>
+
+                    </div>
+
+                    <p class="platforms-note">
+                        My toolkit can adapt to the needs of each project
+                        and the tools available to the client.
+                    </p>
 
                 </div>
 
@@ -378,123 +1031,171 @@
         </section>
 
 
-        <!-- Portfolio Section -->
-        <section class="section portfolio-section" id="portfolio">
+        <!-- =========================
+             CONTACT / CALL TO ACTION
+        ========================== -->
+
+        <section class="section contact-section" id="contact">
             <div class="container">
 
-                <div class="section-heading portfolio-heading">
-                    <p class="eyebrow">A SELECTION OF MY WORK</p>
+                <div class="contact-panel">
 
-                    <h2>
-                        Ideas brought
-                        <span class="gradient-text">to life.</span>
-                    </h2>
+                    <div class="contact-decoration contact-decoration-one"></div>
+                    <div class="contact-decoration contact-decoration-two"></div>
 
-                    <p>
-                        A visual showcase of social media content, campaign
-                        concepts, and digital communication projects.
-                    </p>
+                    <div class="contact-heading">
+
+                        <span class="eyebrow">LET'S CONNECT</span>
+
+                        <h2>
+                            Your Next Great
+                            <span class="text-highlight">Social Media Chapter</span>
+                            Starts Here.
+                        </h2>
+
+                        <p>
+                            Looking for thoughtful social media support,
+                            creative content, or a more organised digital
+                            presence? Let's talk about how we can work together.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-options">
+
+                        <!-- EMAIL -->
+
+                        <a
+                            href="mailto:Bettieamadi@gmail.com"
+                            class="contact-card"
+                            aria-label="Send Bettie an email"
+                        >
+                            <span class="contact-icon" aria-hidden="true">✉</span>
+
+                            <span class="contact-card-content">
+                                <span class="contact-label">EMAIL ME</span>
+                                <strong>Bettieamadi@gmail.com</strong>
+                                <span class="contact-action">Send an email ↗</span>
+                            </span>
+                        </a>
+
+
+                        <!-- LINKEDIN -->
+
+                        <a
+                            href="https://www.linkedin.com/in/bettie-claudie-o-amadi/"
+                            class="contact-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit Bettie's LinkedIn profile"
+                        >
+                            <span class="contact-icon contact-icon-linkedin" aria-hidden="true">in</span>
+
+                            <span class="contact-card-content">
+                                <span class="contact-label">LET'S CONNECT</span>
+                                <strong>LinkedIn Profile</strong>
+                                <span class="contact-action">View my profile ↗</span>
+                            </span>
+                        </a>
+
+
+                        <!-- WHATSAPP -->
+
+                        <a
+                            href="https://wa.me/2348135382292"
+                            class="contact-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Message Bettie on WhatsApp"
+                        >
+                            <span class="contact-icon" aria-hidden="true">☏</span>
+
+                            <span class="contact-card-content">
+                                <span class="contact-label">MESSAGE ME</span>
+                                <strong>WhatsApp</strong>
+                                <span class="contact-action">Start a conversation ↗</span>
+                            </span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-bottom">
+                        <span class="contact-bottom-line"></span>
+                        <p>Good ideas deserve thoughtful execution.</p>
+                        <span class="contact-bottom-line"></span>
+                    </div>
+
                 </div>
 
+            </div>
+        </section>
 
-                <div class="portfolio-filters" aria-label="Filter portfolio projects">
-                    <button class="filter-button active" data-filter="all">All Work</button>
-                    <button class="filter-button" data-filter="design">Social Graphics</button>
-                    <button class="filter-button" data-filter="strategy">Strategy</button>
-                    <button class="filter-button" data-filter="content">Content</button>
-                </div>
+    </main>
 
 
-                <div class="portfolio-grid">
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-                    <article class="portfolio-card" data-category="design">
-                        <div class="portfolio-image">
-                            <img
-                                src="images/project-1.jpg"
-                                alt="Social media graphic design project"
-                                loading="lazy"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <footer class="site-footer">
+        <div class="container footer-content">
 
-                            <div class="project-placeholder">
-                                <span>01</span>
-                                <p>Upload your project image</p>
-                            </div>
+            <a href="#home" class="footer-brand">
+                <span class="logo-mark">B.</span>
+                <span>
+                    <strong>Bettie Amadi</strong>
+                    <small>Social Media Manager</small>
+                </span>
+            </a>
 
-                            <span class="portfolio-category">SOCIAL GRAPHICS</span>
-                        </div>
+            <p class="footer-message">
+                Helping brands show up with purpose and creativity.
+            </p>
 
-                        <div class="portfolio-info">
-                            <p class="project-type">DESIGN & VISUAL COMMUNICATION</p>
-                            <h3>Social Media Graphics</h3>
-                            <p>
-                                A showcase of visual content created to communicate
-                                messages and maintain a consistent brand identity.
-                            </p>
-                            <span class="project-status">Replace with your real project details</span>
-                        </div>
-                    </article>
+            <div class="footer-social-links">
 
+                <a
+                    href="https://www.linkedin.com/in/bettie-claudie-o-amadi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+                    LinkedIn
+                </a>
 
-                    <article class="portfolio-card" data-category="strategy">
-                        <div class="portfolio-image">
-                            <img
-                                src="images/project-2.jpg"
-                                alt="Social media content calendar project"
-                                loading="lazy"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <a
+                    href="https://wa.me/2348135382292"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
+                >
+                    WhatsApp
+                </a>
 
-                            <div class="project-placeholder">
-                                <span>02</span>
-                                <p>Upload your project image</p>
-                            </div>
+                <a
+                    href="mailto:Bettieamadi@gmail.com"
+                    aria-label="Email"
+                >
+                    Email
+                </a>
 
-                            <span class="portfolio-category">STRATEGY</span>
-                        </div>
+            </div>
 
-                        <div class="portfolio-info">
-                            <p class="project-type">PLANNING & ORGANIZATION</p>
-                            <h3>Content Calendar</h3>
-                            <p>
-                                An example of content planning designed to organize
-                                publishing schedules, themes, and content formats.
-                            </p>
-                            <span class="project-status">Replace with your real project details</span>
-                        </div>
-                    </article>
+            <div class="footer-bottom">
+                <p>
+                    © <span id="current-year">2026</span> Bettie Amadi.
+                    All rights reserved.
+                </p>
 
+                <a href="#top" class="back-to-top">
+                    Back to top ↑
+                </a>
+            </div>
 
-                    <article class="portfolio-card" data-category="content">
-                        <div class="portfolio-image">
-                            <img
-                                src="images/project-3.jpg"
-                                alt="Social media carousel content project"
-                                loading="lazy"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        </div>
+    </footer>
 
-                            <div class="project-placeholder">
-                                <span>03</span>
-                                <p>Upload your project image</p>
-                            </div>
-
-                            <span class="portfolio-category">CONTENT</span>
-                        </div>
-
-                        <div class="portfolio-info">
-                            <p class="project-type">EDUCATIONAL & ENGAGING CONTENT</p>
-                            <h3>Carousel Content</h3>
-                            <p>
-                                A space to showcase educational posts, storytelling,
-                                tips, and multi-slide content created for social media.
-                            </p>
-                            <span class="project-status">Replace with your real project details</span>
-                        </div>
-                    </article>
-
-
-                    <article class="portfolio-card" data-category="design">
-                        <div class="portfolio-image">
-                            <img
-                                src="images/project-4.jpg"
-                                alt="Branded social media campaign creative"
-                                loading="lazy"
-                                onerror="this.style.display='none'; this
+</body>
+</html>
